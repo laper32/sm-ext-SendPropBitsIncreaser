@@ -1,0 +1,81 @@
+"Games"
+{
+	"csgo"
+	{
+        "Offsets"
+        {
+            "CCSPlayer::m_ArmorValue"
+            {
+                "class" "CCSPlayer"
+                "prop"  "m_ArmorValue"
+            }
+            "CCSPlayer::m_iAccount"
+            {
+                "class" "CCSPlayer"
+                "prop"  "m_iAccount"
+            }
+            "CBasePlayer::m_iHealth"
+            {
+                "class" "CBasePlayer"
+                "prop"  "m_iHealth"
+            }
+            "CBaseCombatWeapon::m_iClip1"
+            {
+                "class" "CBaseCombatWeapon"
+                "prop"  "m_iClip1"
+            }
+            "CBaseCombatWeapon::m_iClip2"
+            {
+                "class" "CBaseCombatWeapon"
+                "prop"  "m_iClip2"
+            }
+            "CBaseCombatWeapon::m_iPrimaryReserveAmmoCount"
+            {
+                "class" "CBaseCombatWeapon"
+                "prop"  "m_iPrimaryReserveAmmoCount"
+            }
+            "CBaseCombatWeapon::m_iSecondaryReserveAmmoCount"
+            {
+                "class" "CBaseCombatWeapon"
+                "prop"  "m_iSecondaryReserveAmmoCount"
+            }
+            "CBasePlayer::m_iAmmo"
+            {
+                "class" "CBasePlayer"
+                "prop"  "m_iAmmo"
+            }
+            "CCSPlayer::m_iProgressBarDuration"
+            {
+                "class" "CCSPlayer"
+                "prop"  "m_iProgressBarDuration"
+            }
+        }
+
+		"Signatures"
+		{
+			"SendTable_Init" // Str: "SendTable[%03d] = %s\n"
+			{
+				"library"	"engine"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x0C\x83\x3D\x2A\x2A\x2A\x2A\x00\x53"
+				"linux"		"\x55\x89\xE5\x57\x56\x53\x83\xEC\x4C\xA1\x2A\x2A\x2A\x2A\x8B\x7D\x08\x85\xC0"
+			}
+		}
+
+		"Addresses"
+		{
+			"g_SendTableCRC"
+			{
+				"linux"
+				{
+					"signature"	"SendTable_Init"
+					"read"		"270"
+				}
+				"windows"
+				{
+					"signature"	"SendTable_Init"
+					"read"		"205"
+				}
+			}
+		}
+	}
+}
